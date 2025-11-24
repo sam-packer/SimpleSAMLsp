@@ -16,7 +16,7 @@ Follow these steps to get the service provider running.
 
 ```bash
 git clone https://github.com/sam-packer/SimpleSAMLsp
-cd SAML_SP
+cd SimpleSAMLsp
 ```
 
 ### Create a Virtual Environment
