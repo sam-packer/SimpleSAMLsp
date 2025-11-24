@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Sign in • SAML Demo{% endblock %}
+{% block body %}
+<h1>Sign in</h1>
+<p>Authenticate with your organization via SAML.</p>
+<form action="{{ url_for('login') }}" method="get">
+    <button class="btn">Continue with SAML</button>
+</form>
+<p class="muted">
+    ACS: {{ acs_url }}<br/>
+    Metadata: <a href="{{ url_for('metadata') }}">metadata</a>
+</p>
+{% endblock %}

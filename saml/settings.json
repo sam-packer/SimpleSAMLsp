@@ -1,0 +1,23 @@
+{
+  "sp": {
+    "entityId": "https://sp.sampacker.com/metadata",
+    "assertionConsumerService": {
+      "url": "https://sp.sampacker.com/acs",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+    },
+    "x509cert": "generate certificate and put cert here",
+    "privateKey": "generate certificate and put key here"
+  },
+  "idp": {
+    "entityId": "https://shib.sampacker.com/idp/shibboleth",
+    "singleSignOnService": {
+      "url": "https://shib.sampacker.com/idp/profile/SAML2/Redirect/SSO",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "singleLogoutService": {
+      "url": "https://shib.sampacker.com/idp/profile/SAML2/Redirect/SLO",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "x509cert": "shibboleth certificate here"
+  }
+}

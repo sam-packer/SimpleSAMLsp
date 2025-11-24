@@ -1,0 +1,10 @@
+[project]
+name = "saml-sp"
+version = "1.0.0"
+description = "Sample service provider to work with Shibboleth IdP"
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.2",
+    "python3-saml>=1.16.0",
+    "werkzeug>=3.1.3",
+]

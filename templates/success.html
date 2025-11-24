@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Login successful{% endblock %}
+{% block body %}
+<h1>Welcome!</h1>
+<p>You have successfully authenticated.</p>
+
+<div class="kvs">
+    <div><b>NameID:</b> {{ nameid }}</div>
+    <div><b>Session Index:</b> {{ session_index }}</div>
+</div>
+
+<h3>Attributes</h3>
+<pre class="mono">{{ attributes | tojson(indent=2) }}</pre>
+
+<a href="{{ url_for('index') }}">Back to home</a>
+{% endblock %}

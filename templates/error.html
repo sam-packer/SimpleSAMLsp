@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Sign-in error{% endblock %}
+{% block body %}
+<h1>Sign-in failed</h1>
+<p>{{ friendly or "Your identity provider denied access." }}</p>
+
+{% if reason %}
+<p><b>Reason:</b> {{ reason }}</p>
+{% endif %}
+
+{% if status_code %}
+<pre>SAML Status: {{ status_code }} / {{ sub_status }}
+Message: {{ status_message }}</pre>
+{% endif %}
+
+{% if raw_xml %}
+<details>
+    <summary>Technical details (SAMLResponse)</summary>
+    <pre class="mono">{{ raw_xml }}</pre>
+</details>
+{% endif %}
+
+<a href="{{ url_for('index') }}">Back to home</a>
+{% endblock %}
